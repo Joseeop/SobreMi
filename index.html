@@ -73,6 +73,7 @@
   opacity:1;
   pointer-events:auto;
 }
+/* Hacemos uso de background-image, hover, active  */
 #fondo {
             box-sizing: border-box;
             background-color: blue;
@@ -93,8 +94,8 @@
         }
 
         #fondo:hover {
-
-            background-image: url("fotocarnet.jpeg");
+          background-image: url("fondoActive.jpg");
+            
             background-origin: content-box;
             background-size: 100% 100%;
             padding-left: 20px;
@@ -138,10 +139,7 @@
     <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.1">SOBRE MI</text>
   </svg>
 
-<body>
-  <div id="fondo">
-    
-  </div>
+
     <h1></h1>
     <h2 >Mi historia</h2>
 
@@ -172,6 +170,10 @@
         </p>
         
     </div>
+    <body>
+      <div id="fondo">
+        
+      </div>
 
     <!-- /* VENTANA MODAL CONTENIDO */ -->
     <a id="LINK" href="#miModal">Más sobre mi</a>
