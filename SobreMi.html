@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mi</title>
+</head>
+<style>
+/* .class / #id */
+
+
+    
+    h1{text-align: center;}
+    h2{margin-left: 10px;
+        font-style: italic;
+        font-size: x-large;
+        text-decoration:double;
+    }
+    body{background-color:rgb(151, 234, 237);}
+    /*first-child afecta al primer p de cada div */
+    p:first-child{
+        color:rgb(41, 78, 228);
+        font-weight: 900;
+        font-size:larger;
+        display:inline; } 
+        p:nth-child(2){
+            color:rgb(41, 78, 228);
+        }
+        p:nth-child(3){
+            color:rgb(41, 78, 228);
+        }
+    p::first-letter{
+        font-weight: bold;
+        
+    }
+    h2::first-letter{
+        font-weight: bold;
+        font-size: 50px;
+    }
+    h2{
+        color:rgb(41, 78, 228);
+    }
+/* ESTILOS PARA VENTANA MODAL */
+    #LINK{
+        background-color:rgb(19, 158, 227) ;
+        border-radius: 10%;
+        border: solid;
+        border-width: 2px;
+        border-color: blue;
+      }
+
+.modal-contenido{
+  background-color:rgb(22, 219, 225);
+  width:300px;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+}
+.modal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+
+</style>
+<svg viewbox="0 0 100 20">
+    <defs>
+      <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="5%" stop-color="#326384"/>
+        <stop offset="95%" stop-color="#123752"/>
+      </linearGradient>
+      <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+        <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+          <animateTransform
+              attributeName="transform"
+              begin="0s"
+              dur="1.5s"
+              type="translate"
+              from="0,0"
+              to="40,0"
+              repeatCount="indefinite" />
+        </path>
+      </pattern>
+    </defs>
+    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">SOBRE MI</text>
+    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.1">SOBRE MI</text>
+  </svg>
+
+<body>
+    <h1></h1>
+    <h2 >Mi historia</h2>
+
+    <div>
+        <p>Malagueño de nacimiento, apasionado de la gastronomía.
+        </p>
+        <p>Malagueño de nacimiento, apasionado de la gastronomía y la alimentación saludable, cree éste blog con el propósito de hacer llegar
+            a más personas la variedad gastronómica que ofrece nuestra ciudad, tanto a nivel local como de la cocina proveniente del extranjero.</p>
+            
+    </div>
+    <h2>Mis hobbies</h2>
+    
+    <div>
+        <p>Deporte e informática</p>
+        <p>El deporte y la informática son las aficiones que ocupan la mayor parte de mi día, compaginado con la lectura.
+            Cuando hablo de deporte, hablo de buscar nuevas experiencias y adquirir nuevas habilidades, factores de alta aplicabilidad al resto de mi vida.
+            La informática se coló entre mis hobbies hace relativamente poco, pero ahora es una de mis grandes motivaciones, por la sensación de que las posibilidades de aprender son infinitas. 
+        </p>
+        
+    </div>
+    <h2>Proyectos</h2>
+    <div>
+        <p>Siempre dispuesto a aprender y cambiar de idea.</p>
+        <p>Los proyectos que contemplo a medio/largo plazo son muchos, entre ellos se encuentra este blog.
+            Aspiro a poder compaginar un trabajo, en el que me sienta realizado y pueda ayudar a los demás y 
+            hacerles la vida más facil en algún ámbito, con un crecimiento personal de constante aprendizaje y descubrimiento.
+        
+        </p>
+        
+    </div>
+
+    <!-- /* VENTANA MODAL CONTENIDO */ -->
+    <a id="LINK" href="#miModal">Más sobre mi</a>
+    <div id="miModal" class="modal">
+      <div class="modal-contenido">
+        <a href="#">cerrar</a>
+        <h2>Música</h2>
+        <h2>Ludovico Einaudi</h2>
+        <a href="https://www.youtube.com/watch?v=6R3fYEFCZz8&list=LL&index=41&ab_channel=ElliottWalsh">Pulsa para escuchar la música que uso para concentrarme.</a>
+      </div>  
+    </div>
+  
+
+</body>
+
+</html>
